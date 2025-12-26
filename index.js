@@ -17,6 +17,7 @@ const ItemSchema = new mongoose.Schema({
   code: String,
   name: String,
   adname: String,
+  stext: String,
 });
 const Item = mongoose.model('Item', ItemSchema);
 
