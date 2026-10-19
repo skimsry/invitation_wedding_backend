@@ -37,10 +37,10 @@ app.post('/api/items', async (req, res) => {
 app.get('/api/person/:code', async (req, res) => {
   try {
     // This finds the code regardless of Uppercase/Lowercase
-    const person = await Item.findOne({ 
-      code: { $regex: new RegExp("^" + req.params.code + "$", "i") } 
+    const person = await Item.findOne({
+      code: { $regex: new RegExp("^" + req.params.code + "$", "i") }
     });
-    
+
     if (person) {
       res.json(person);
     } else {
